@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume | Ralph Raffy Suarez</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  </head>
+  <body>
+    
+    <header class="header">
+      <a href="#" class="logo">Ralph.</a>
+
+      <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Certification</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home">
+      <div class="home-content">
+        <h1>Hi, I'm Ralph Raffy </h1>
+        <h3>Frontend Developer</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam aliquid eveniet numquam iusto iste necessitatibus.</p>
+        <div class="btn-box">
+          <a href="#">Hire Me</a>
+          <a href="#"><i class='bx bx-file' ></i>Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-content">
+        <h1>About Me</h1>
+        <p>Hi there! I'm Ralph Raffy C. Suarez, a dedicated and enthusiastic purusuing at BSIT at STI College Balagtas
+          With a strong foundation in <strong>Frontend Developer</strong>. My academic journey has allowed me to work on various projects, including Mythic Quest Game using Unity Engine and Point on sale on our School Uniform, which build my skills in <strong>Html, Css, Javascript, and C#.</strong>
+        </p>
+        <p>Outside of my studies, I enjoy to play basketball and play online games, which help me stay balanced and inspired. Looking ahead, I'm excited to explore opportunities in Frontend Developing, where I can leverage my skills and knowledge to make a meaningful impact.</p> 
+        <p>Feel free to reach out to me at my contacts. And i'm always open to new challenges and collaborations </p>
+      </div>
+    </section>
+
+    <section class="services">
+      <h1>Services</h1>
+      <div class="services-content">
+        <div class="container" id="Frontend" onclick="toggleActive(this)">
+          <h3>Frontend Developer</h3>
+          <div class="new-content">New content after clicking the div!</div>
+        </div>
+
+        <div class="container" id="ui" onclick="toggleActive(this)">
+          <h3>UI/UX Design</h3>
+          <div class="new-content">New content after clicking the div!</div>
+        </div>
+        
+        <div class="container" id="responsive" onclick="toggleActive(this)">
+          <h3>Responsive Web Design</h3>
+          <div class="new-content">New content after clicking the div!</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="certification">
+      <h1>My Certifications</h1>
+      <div class="certifications-content">
+        <div class="certifications-container">Sap Business One</div>
+        <div class="certifications-container">Java Foundation</div>
+        <div class="certifications-container">System Administration</div>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <div class="contacts-content">
+        <h1>Contact Me</h1>
+        <p><i class='bx bx-envelope' ></i> szralph64@gmail.com</p>
+        <p><i class='bx bx-phone-call' ></i> 09915615330</p>
+      </div>
+    </section>
+
+    <div class="socials">
+      <a href="#"><i class='bx bxl-facebook' ></i></a>
+      <a href="#"><i class='bx bxl-linkedin'></i></a>
+      <a href="#"><i class='bx bxl-github'></i></a>
+    </div>
+
+    <script>
+      function toggleActive(element) {
+        element.classList.toggle('active');
+        var newContent = element.querySelector('.new-content');
+        if (element.classList.contains('active')) {
+          newContent.style.opacity = 1;
+        } else {
+          newContent.style.opacity = 0;
+        }
+      }
+    </script>
+
+  </body>
+</html>
