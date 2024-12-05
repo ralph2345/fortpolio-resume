@@ -79,7 +79,6 @@ a:hover, .navbar a.active {
     margin-top: 50px;
 }
 
-/* tae */
 .btn-box a {
     display: inline-flex;
     justify-content: center;
@@ -158,85 +157,144 @@ a:hover, .navbar a.active {
 }
 
 /* Services style */
-.services {
+
+.services h1{
     text-align: center;
-    margin: 20px;
 }
 
-.services-content {
-    display: flex;
+.wrapper {
+    padding: 10px 10%;
 }
 
-.services h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    width: 100%;
+#card-area {
+    padding: 50px 0;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    align-items: center;
-    padding: 20px;
-    border-radius: 20px;
-    margin: 20px;
-    flex: 1;
-    transition: 0.3s ease-in-out;
+.box-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
 }
 
-.container h3 {
-    color: #ffffff;
-}
-
-.container p {
-    color: #ffffff;
-}
-
-#Frontend, #ui, #responsive {
-    width: 300px;
-    height: 300px;
+.box {
+    border-radius: 10px;
+    position: relative;
     overflow: hidden;
-    background-position: center;
-    background-size: cover;
-    border: 5px solid white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 5);
 }
 
-#Frontend {
-    background-image: url(https://th.bing.com/th?id=OIF.K%2bdADKYXnfGtjiMV5g3yLQ&rs=1&pid=ImgDetMain);
-}  
-
-#ui {
-    background-image: url(https://www.iotworlds.com/wp-content/uploads/2023/01/iotworlds-UI-UX-designer.jpg);
+.box img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: 0.5s;
 }
 
-#responsive {
-    background-image: url(https://brandlume.com/wp-content/uploads/2021/04/responsive-web-design.jpeg);
+.overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 40px;
+    font-size: 14px;
+    transition: height 0.5s;
 }
 
-.container:hover{
+.overlay h3 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.box:hover img {
     transform: scale(1.1);
 }
 
-.container.active h3, .container.active p { 
-    opacity: 0; /* Hide the original content */ 
+.box:hover .overlay {
+    height: 210%;
 }
+
+
 
 /* Certifications style */
-.certification h1 {
-    text-align: center;
-}
-.certification .certifications-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #3C3D37;
-}
 
 .certification h1 {
-    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.certification .wrapper {
     width: 100%;
+    height:70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certification .container {
+    height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.certification .card {
+    width: 100px;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
+}
+
+.certification .card .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.certification .card .icon {
+    background-color: #1E201E;
+    color: white;
+    border-radius: 60%;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.certification input {
+    display: none;
+}
+
+.certification input:checked + label {
+    width: 550px;
+}
+
+.certification .card[for="c1"] {
+    background-image: url("Screenshot 2024-12-05 104652.png");
+}
+
+.certification .card[for="c2"] {
+    background-image: url("Screenshot 2024-12-05 104523.png");
+}
+
+.certification .card[for="c3"] {
+    background-image: url("Screenshot 2024-12-05 104619.png");
 }
