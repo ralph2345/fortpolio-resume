@@ -1,206 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Ralph Raffy Suarez</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-  </head>
-  <body>
-    
-    <header class="header">
-      <a href="#" class="logo">Ralph.</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Ralph Raffy Suarez</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    .about-section,
+    .education-section {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0s 0.5s;
+    }
 
-      <nav class="navbar">
-        <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Skills</a>
-        <a href="#">Certification</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
+    .about-section.active,
+    .education-section.active {
+      display: block;
+      /* Only show the section that has the 'active' class */
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.5s ease, visibility 0s 0s;
+    }
+  </style>
 
-    <section class="home">
-      <div class="home-content">
-        <h1>Hi, I'm Ralph Raffy </h1>
-        <h3>Frontend Developer</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam aliquid eveniet numquam iusto iste necessitatibus.</p>
-        <div class="btn-box">
-          <a href="#">Hire Me</a>
-          <a href="#"><i class='bx bx-file' ></i>Download CV</a>
-        </div>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="#" class="logo">Ralph.</a>
+
+    <nav class="navbar">
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Skills</a>
+      <a href="#">Certification</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home content -->
+  <section class="home">
+    <div class="home-content">
+      <h1>Hi, I'm Ralph Raffy </h1>
+      <h3>Frontend Developer</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam aliquid eveniet numquam iusto iste
+        necessitatibus.</p>
+      <div class="btn-box">
+        <a href="#">Hire Me</a>
+        <a href="#"><i class='bx bx-file'></i>Download CV</a>
       </div>
-    </section>
-
-    <section class="about">
-      <div class="wrapper">
-        <div class="side-container">
-          <img src="https://i.pinimg.com/originals/0c/d0/5c/0cd05cbc547192808b4ad1c411120023.jpg" alt="">
-        </div>
-    
-        <div class="about-content">
-          <h1 id="section-title">About Me</h1>
-          <div class="about-section active">
-            <p>Hi there! I'm Ralph Raffy C. Suarez, a dedicated and enthusiastic pursuing a BSIT at STI College Balagtas
-              With a strong foundation in <strong>Frontend Developer</strong>. My academic journey has allowed me to work on various projects, including Mythic Quest Game using Unity Engine and Point on sale on our School Uniform, which build my skills in <strong>Html, Css, Javascript, and C#.</strong>
-            </p>
-            <p>Outside of my studies, I enjoy playing basketball and online games, which help me stay balanced and inspired. Looking ahead, I'm excited to explore opportunities in Frontend Developing, where I can leverage my skills and knowledge to make a meaningful impact.</p> 
-            <p>Feel free to reach out to me at my contacts. And I'm always open to new challenges and collaborations.</p>
-          </div>
-          
-          <div class="education-section">
-            <div class="education-item">
-              <ul>
-                <li style="font-weight: 800;">Elementary (2009 - 2015)</li>
-              </ul>
-              <p>- Santol Elementary School</p>
-              <p>- Santol Balagtas, Bulacan</p>
-            </div>
-            <div class="education-item">
-              <ul>
-                <li style="font-weight: 800;">High School (2015 - 2019)</li>
-              </ul>
-              <p>- Garden Angels Integrated School, Inc.</p>
-              <p>- P. Sta Cruz Village, Borol 1st, Balagtas, Bulacan</p>
-            </div>
-            <div class="education-item">
-              <ul>
-                <li style="font-weight: 800;">Senior High School (2019 - 2021)</li>
-              </ul>
-              <p>- College of Mary Immaculate</p>
-              <p>- Poblacion, Pandi, Bulacan</p>
-            </div>
-            <div class="education-item">
-              <ul>
-                <li style="font-weight: 800;">College (2021 - present)</li>
-              </ul>
-              <p>- STI College Balagtas</p>
-              <p>- Balagtas, Bulacan</p>
-            </div>
-          </div>
-    
-          <div class="btn-box1">
-            <a href="#" class="active" onclick="showSection('about', this)">About Me</a>
-            <a href="#" onclick="showSection('education', this)">Education</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-
-    <section class="services">
-      <h1>Services</h1>
-      <div id="card-area">
-        <div class="box-area">
-          <div class="box">
-            <img src="https://th.bing.com/th/id/OIP.xfZdjAmGaAHXQz1kh-v8QAHaE7?rs=1&pid=ImgDetMain" alt="">
-            <div class="overlay">
-              <h3>Frontend Developer</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum officia sapiente nesciunt vitae enim officiis aliquid reiciendis omnis, fuga blanditiis.</p>
-            </div>
-          </div>
-
-          <div class="box">
-            <img src="https://s3.ap-south-1.amazonaws.com/townscript-production/images/3db55480-5fb4-43c3-baf5-791d33796ad2.jpg" alt="">
-            <div class="overlay">
-              <h3>UI/UX Developer</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi fuga iusto laboriosam quam, inventore est accusantium nulla minus. Distinctio, nesciunt.</p>
-            </div>
-          </div>
-
-          <div class="box">
-            <img src="https://esolpro.com/esol/wp-content/uploads/2017/03/Responsive-web-design-tool.jpg" alt="">
-            <div class="overlay">
-              <h3>Responsive web design</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore totam suscipit voluptates facilis alias, nemo cumque quo. Aperiam, ex quae!</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="certification">
-      <h1>My Certifications</h1>
-      <div class="wrapper">
-        <div class="container">
-          <input type="radio" name="slide" id="c1">
-          <label for="c1" class="card">
-            <div class="row">
-              <div class="icon">1</div>
-              <div class="description">
-              </div>
-            </div>
-          </label>
-
-          <input type="radio" name="slide" id="c2">
-          <label for="c2" class="card">
-            <div class="row">
-              <div class="icon">2</div>
-              <div class="description">
-              </div>
-            </div>
-          </label>
-
-          <input type="radio" name="slide" id="c3">
-          <label for="c3" class="card">
-            <div class="row">
-              <div class="icon">3</div>
-              </div>
-            </div>
-          </label>
-
-
-        </div>
-      </div>
-    </section>
-
-    <section class="contacts">
-      <div class="contacts-content">
-        <h1>Contact Me</h1>
-        <p><i class='bx bx-envelope' ></i> szralph64@gmail.com</p>
-        <p><i class='bx bx-phone-call' ></i> 09915615330</p>
-      </div>
-    </section>
-
-    <div class="socials">
-      <a href="#"><i class='bx bxl-facebook' ></i></a>
-      <a href="#"><i class='bx bxl-linkedin'></i></a>
-      <a href="#"><i class='bx bxl-github'></i></a>
     </div>
+  </section>
 
-    <script>
-      function showSection(section, el) {
-        // Hide all sections
-        document.querySelector('.about-section').classList.remove('active');
-        document.querySelector('.education-section').classList.remove('active');
-      
-        // Show the selected section
-        if (section === 'about') {
-          document.querySelector('.about-section').classList.add('active');
-        } else if (section === 'education') {
-          document.querySelector('.education-section').classList.add('active');
-        }
-      
-        // Remove active class from all links
-        const links = document.querySelectorAll('.btn-box1 a');
-        links.forEach(link => link.classList.remove('active'));
-      
-        // Add active class to the clicked link
-        el.classList.add('active');
+  <!-- About content -->
+  <section class="about">
+    <div class="wrapper">
+      <div class="side-container">
+        <img src="https://i.pinimg.com/originals/0c/d0/5c/0cd05cbc547192808b4ad1c411120023.jpg" alt="">
+      </div>
+
+      <div class="about-content">
+        <h1 id="section-title">About Me</h1>
+        <div class="about-section active">
+          <p>Hi there! I'm Ralph Raffy C. Suarez, a dedicated and enthusiastic pursuing a BSIT at STI College Balagtas
+            With a strong foundation in <strong>Frontend Developer</strong>. My academic journey has allowed me to work
+            on various projects, including Mythic Quest Game using Unity Engine and Point on sale on our School Uniform,
+            which build my skills in <strong>Html, Css, Javascript, and C#.</strong>
+          </p>
+          <p>Outside of my studies, I enjoy playing basketball and online games, which help me stay balanced and
+            inspired. Looking ahead, I'm excited to explore opportunities in Frontend Developing, where I can leverage
+            my skills and knowledge to make a meaningful impact.</p>
+          <p>Feel free to reach out to me at my contacts. And I'm always open to new challenges and collaborations.</p>
+        </div>
+
+        <div class="education-section">
+          <div class="education-item">
+            <ul>
+              <li style="font-weight: 800;">Elementary (2009 - 2015)</li>
+            </ul>
+            <p>- Santol Elementary School</p>
+            <p>- Santol Balagtas, Bulacan</p>
+          </div>
+          <div class="education-item">
+            <ul>
+              <li style="font-weight: 800;">High School (2015 - 2019)</li>
+            </ul>
+            <p>- Garden Angels Integrated School, Inc.</p>
+            <p>- P. Sta Cruz Village, Borol 1st, Balagtas, Bulacan</p>
+          </div>
+          <div class="education-item">
+            <ul>
+              <li style="font-weight: 800;">Senior High School (2019 - 2021)</li>
+            </ul>
+            <p>- College of Mary Immaculate</p>
+            <p>- Poblacion, Pandi, Bulacan</p>
+          </div>
+          <div class="education-item">
+            <ul>
+              <li style="font-weight: 800;">College (2021 - present)</li>
+            </ul>
+            <p>- STI College Balagtas</p>
+            <p>- Balagtas, Bulacan</p>
+          </div>
+        </div>
+
+        <div class="btn-box1">
+          <a href="#" class="active" onclick="showSection('about', this, event)">About Me</a>
+          <a href="#" onclick="showSection('education', this, event)">Education</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pojects -->
+  <section class="services">
+    <h1>Services</h1>
+    <div id="card-area">
+      <div class="box-area">
+        <div class="box">
+          <img src="https://th.bing.com/th/id/OIP.xfZdjAmGaAHXQz1kh-v8QAHaE7?rs=1&pid=ImgDetMain" alt="">
+          <div class="overlay">
+            <h3>Frontend Developer</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum officia sapiente nesciunt vitae enim
+              officiis aliquid reiciendis omnis, fuga blanditiis.</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/townscript-production/images/3db55480-5fb4-43c3-baf5-791d33796ad2.jpg"
+            alt="">
+          <div class="overlay">
+            <h3>UI/UX Developer</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi fuga iusto laboriosam quam, inventore est
+              accusantium nulla minus. Distinctio, nesciunt.</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="https://esolpro.com/esol/wp-content/uploads/2017/03/Responsive-web-design-tool.jpg" alt="">
+          <div class="overlay">
+            <h3>Responsive web design</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore totam suscipit voluptates facilis alias,
+              nemo cumque quo. Aperiam, ex quae!</p>
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certification">
+    <h1>My Certifications</h1>
+    <div class="wrapper">
+      <div class="container">
+        <input type="radio" name="slide" id="c1">
+        <label for="c1" class="card">
+          <div class="row">
+            <div class="icon">1</div>
+            <div class="description">
+            </div>
+          </div>
+        </label>
+
+        <input type="radio" name="slide" id="c2">
+        <label for="c2" class="card">
+          <div class="row">
+            <div class="icon">2</div>
+            <div class="description">
+            </div>
+          </div>
+        </label>
+
+        <input type="radio" name="slide" id="c3">
+        <label for="c3" class="card">
+          <div class="row">
+            <div class="icon">3</div>
+          </div>
+      </div>
+      </label>
+
+
+    </div>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="contacts">
+    <div class="contacts-content">
+      <h1>Contact Me</h1>
+      <p><i class='bx bx-envelope'></i> szralph64@gmail.com</p>
+      <p><i class='bx bx-phone-call'></i> 09915615330</p>
+    </div>
+  </section>
+
+  <div class="socials">
+    <a href="#"><i class='bx bxl-facebook'></i></a>
+    <a href="#"><i class='bx bxl-linkedin'></i></a>
+    <a href="#"><i class='bx bxl-github'></i></a>
+  </div>
+
+  <!-- Scripts -->
+
+  <script>
+    function showSection(section, el, event) {
+      // Prevent the default behavior of the anchor tag (which would cause the page to scroll to the top)
+      event.preventDefault();
+
+      // Hide all sections
+      document.querySelector('.about-section').classList.remove('active');
+      document.querySelector('.education-section').classList.remove('active');
+
+      // Show the selected section with the 'active' class
+      if (section === 'about') {
+        document.querySelector('.about-section').classList.add('active');
+      } else if (section === 'education') {
+        document.querySelector('.education-section').classList.add('active');
       }
-      
-      // Set default active section
-      document.addEventListener('DOMContentLoaded', () => {
-        showSection('about', document.querySelector('.btn-box1 a.active'));
-      });
-      </script>
-      
-      
-      
-      
 
-  </body>
+      // Remove active class from all links
+      const links = document.querySelectorAll('.btn-box1 a');
+      links.forEach(link => link.classList.remove('active'));
+
+      // Add active class to the clicked link
+      el.classList.add('active');
+    }
+
+    // Set default active section
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('about', document.querySelector('.btn-box1 a.active'));
+    });
+  </script>
+
+  <style>
+    .about-section,
+    .education-section {
+      opacity: 0;
+      /* Initially invisible */
+      visibility: hidden;
+      /* Hidden sections */
+      transition: opacity 0.5s ease, visibility 0s 0.5s;
+    }
+
+    .about-section.active,
+    .education-section.active {
+      opacity: 1;
+      /* Visible */
+      visibility: visible;
+      transition: opacity 0.5s ease, visibility 0s 0s;
+    }
+  </style>
+
+</body>
+
 </html>

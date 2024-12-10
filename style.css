@@ -128,7 +128,6 @@ a:hover, .navbar a.active {
 }
 
 /* about content */
-/* about content */
 .about .wrapper {
     display: flex;
     height: 100vh;
@@ -182,14 +181,6 @@ a:hover, .navbar a.active {
     border: 1px solid black;
   }
   
-  .about-section, .education-section {
-    display: none;
-  }
-  
-  .about-section.active, .education-section.active {
-    display: block;
-  }
-  
   .btn-box1 a:hover, .btn-box1 a.active {
     color: #ECDFCC;
     transition: ease-in-out .3s;
@@ -197,20 +188,26 @@ a:hover, .navbar a.active {
   
   .education-section {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 10px; /* Space between items */
-    padding: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, auto);
+    gap: 20px; /* Space between items */
+    margin-top: 20px;
   }
   
   .education-item {
-    margin: 3px;
+    padding: 10px;
     border: 1px solid black;
+    border-radius: 8px;
+    background-color: #575f54;
   }
   
-  .education-item ul, .education-item p {
+  .education-item ul {
+    padding: 0;
     margin: 0;
-    padding: 15px;
-    font-size: 15px;
+  }
+
+  .education-item p {
+    margin: 5px 0;
   }
   
 
