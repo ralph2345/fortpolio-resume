@@ -40,23 +40,56 @@
         <div class="side-container">
           <img src="https://i.pinimg.com/originals/0c/d0/5c/0cd05cbc547192808b4ad1c411120023.jpg" alt="">
         </div>
-
+    
         <div class="about-content">
-          <h1>About Me</h1>
-          <p>Hi there! I'm Ralph Raffy C. Suarez, a dedicated and enthusiastic purusuing at BSIT at STI College Balagtas
-            With a strong foundation in <strong>Frontend Developer</strong>. My academic journey has allowed me to work on various projects, including Mythic Quest Game using Unity Engine and Point on sale on our School Uniform, which build my skills in <strong>Html, Css, Javascript, and C#.</strong>
-          </p>
-          <p>Outside of my studies, I enjoy to play basketball and play online games, which help me stay balanced and inspired. Looking ahead, I'm excited to explore opportunities in Frontend Developing, where I can leverage my skills and knowledge to make a meaningful impact.</p> 
-          <p>Feel free to reach out to me at my contacts. And i'm always open to new challenges and collaborations </p>
+          <h1 id="section-title">About Me</h1>
+          <div class="about-section active">
+            <p>Hi there! I'm Ralph Raffy C. Suarez, a dedicated and enthusiastic pursuing a BSIT at STI College Balagtas
+              With a strong foundation in <strong>Frontend Developer</strong>. My academic journey has allowed me to work on various projects, including Mythic Quest Game using Unity Engine and Point on sale on our School Uniform, which build my skills in <strong>Html, Css, Javascript, and C#.</strong>
+            </p>
+            <p>Outside of my studies, I enjoy playing basketball and online games, which help me stay balanced and inspired. Looking ahead, I'm excited to explore opportunities in Frontend Developing, where I can leverage my skills and knowledge to make a meaningful impact.</p> 
+            <p>Feel free to reach out to me at my contacts. And I'm always open to new challenges and collaborations.</p>
+          </div>
+          
+          <div class="education-section">
+            <div class="education-item">
+              <ul>
+                <li style="font-weight: 800;">Elementary (2009 - 2015)</li>
+              </ul>
+              <p>- Santol Elementary School</p>
+              <p>- Santol Balagtas, Bulacan</p>
+            </div>
+            <div class="education-item">
+              <ul>
+                <li style="font-weight: 800;">High School (2015 - 2019)</li>
+              </ul>
+              <p>- Garden Angels Integrated School, Inc.</p>
+              <p>- P. Sta Cruz Village, Borol 1st, Balagtas, Bulacan</p>
+            </div>
+            <div class="education-item">
+              <ul>
+                <li style="font-weight: 800;">Senior High School (2019 - 2021)</li>
+              </ul>
+              <p>- College of Mary Immaculate</p>
+              <p>- Poblacion, Pandi, Bulacan</p>
+            </div>
+            <div class="education-item">
+              <ul>
+                <li style="font-weight: 800;">College (2021 - present)</li>
+              </ul>
+              <p>- STI College Balagtas</p>
+              <p>- Balagtas, Bulacan</p>
+            </div>
+          </div>
+    
           <div class="btn-box1">
-            <a href="#">About Me</a>
-            <a href="#">Education</a>
+            <a href="#" class="active" onclick="showSection('about', this)">About Me</a>
+            <a href="#" onclick="showSection('education', this)">Education</a>
           </div>
         </div>
-
       </div>
-      
     </section>
+    
 
     <section class="services">
       <h1>Services</h1>
@@ -139,16 +172,35 @@
     </div>
 
     <script>
-      function toggleActive(element) {
-        element.classList.toggle('active');
-        var newContent = element.querySelector('.new-content');
-        if (element.classList.contains('active')) {
-          newContent.style.opacity = 1;
-        } else {
-          newContent.style.opacity = 0;
+      function showSection(section, el) {
+        // Hide all sections
+        document.querySelector('.about-section').classList.remove('active');
+        document.querySelector('.education-section').classList.remove('active');
+      
+        // Show the selected section
+        if (section === 'about') {
+          document.querySelector('.about-section').classList.add('active');
+        } else if (section === 'education') {
+          document.querySelector('.education-section').classList.add('active');
         }
+      
+        // Remove active class from all links
+        const links = document.querySelectorAll('.btn-box1 a');
+        links.forEach(link => link.classList.remove('active'));
+      
+        // Add active class to the clicked link
+        el.classList.add('active');
       }
-    </script>
+      
+      // Set default active section
+      document.addEventListener('DOMContentLoaded', () => {
+        showSection('about', document.querySelector('.btn-box1 a.active'));
+      });
+      </script>
+      
+      
+      
+      
 
   </body>
 </html>
