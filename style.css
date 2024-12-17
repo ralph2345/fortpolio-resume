@@ -110,12 +110,30 @@ a:hover, .navbar a.active {
 
 
 /* about content */
+.about-section,
+    .education-section {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0s 0.5s;
+    }
+
+.about-section.active,
+.education-section.active {
+    display: block;
+    /* Only show the section that has the 'active' class */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s 0s;
+}
+
+
 .about .wrapper {
     display: flex;
     height: 100vh;
     padding: 0 10%;
     flex-direction: row;
-    margin-bottom: 200px;
+    margin-top: 80px;
   }
   
   .wrapper img {
@@ -194,7 +212,6 @@ a:hover, .navbar a.active {
 .services h1{
     text-align: center;
 }
-
 
 .wrapper {
     padding: 10px 10%;
@@ -448,3 +465,32 @@ button:hover {
 button:active {
     background-color: hsl(37, 22%, 53%);
 }
+
+/* Skills */
+.skills {
+   margin-top: 50px;
+}
+.skills-text {
+    text-align: center;
+}
+
+.skills-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill-item i {
+    margin: 70px 40px;
+    font-size: 5rem;
+    margin-bottom: 10px;
+    color: #3498db
+}
+
+.skill-item p { 
+    text-align: center;
+    font-size: 1.2rem; /* Adjust size as needed */ 
+    color: #ECDFCC;
+}
+

@@ -6,25 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Ralph Raffy Suarez</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <script src="script.js"></script>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <style>
-    .about-section,
-    .education-section {
-      display: none;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.5s ease, visibility 0s 0.5s;
-    }
-
-    .about-section.active,
-    .education-section.active {
-      display: block;
-      /* Only show the section that has the 'active' class */
-      opacity: 1;
-      visibility: visible;
-      transition: opacity 0.5s ease, visibility 0s 0s;
-    }
+    
   </style>
 
 </head>
@@ -170,6 +156,33 @@
     </div>
   </section>
 
+  <!-- Skills -->
+  <section class="skills">
+    <h1 class="skills-text">My Skills</h1>
+    <div class="skills-container">
+        <div class="skill-item">
+          <i class="fa-brands fa-html5 fa-3x"></i>
+          <p>HTML5</p>
+        </div>
+        <div class="skill-item">
+          <i class="fa-brands fa-css3-alt fa-3x"></i>
+          <p>CSS3</p>
+        </div>
+        <div class="skill-item">
+          <i class="fa-brands fa-js fa-3x"></i>
+          <p>Javascript</p>
+        </div>
+        <div class="skill-item">
+          <i class="fa-brands fa-java fa-3x"></i>
+          <p>Java</p>
+        </div>
+        <div class="skill-item">
+          <i class="fa-solid fa-database fa-3x"></i>
+          <p>SQL</p>
+        </div>
+    </div>
+  </section>
+
   <!-- Certifications -->
   <section class="certification">
     <h1>My Certifications</h1>
@@ -199,9 +212,8 @@
             <div class="icon">3</div>
           </div>
       </div>
-      </label>
-
-
+    </label>
+    
     </div>
     </div>
   </section>
