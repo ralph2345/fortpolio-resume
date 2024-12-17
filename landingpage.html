@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Ralph Raffy Suarez</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <style>
     .about-section,
@@ -124,8 +125,8 @@
 
         <!-- Mythic Quest game -->
         <div class="box">
-          <a href="" target="_blank" class="anchor-projects">
-            <img src="https://th.bing.com/th/id/OIP.xfZdjAmGaAHXQz1kh-v8QAHaE7?rs=1&pid=ImgDetMain" alt="">
+          <a href="https://itsdette.itch.io/mythic-quest1" target="_blank" class="anchor-projects">
+            <img src="mythic quest.png" alt="">
             <div class="overlay">
               <h3>Mythic Quest Game</h3>
               <p>A 2d RPG turn based quiz type game developed on unity engine, that is set in a rich and vibrant world inspired by Filipino mythology and folklores.
@@ -207,50 +208,30 @@
 
   <!-- Contacts -->
   <section class="contacts">
+    <h1>Let's work together</h1>
     <div class="contacts-content">
-      <h1>Contact Me</h1>
+      <h3 style="color: #8d795a">Mail</h3>
       <p><i class='bx bx-envelope'></i> szralph64@gmail.com</p>
-      <p><i class='bx bx-phone-call'></i> 09915615330</p>
+      <h3 style="color: #8d795a">Phone</h3>
+      <p><i class='bx bx-phone-call'></i> +63 991 5615 330</p>
     </div>
   </section>
-
+  <h3 class="connect" style="color: #8d795a">Connect with me</h3>
   <div class="socials">
     <a href="#"><i class='bx bxl-facebook'></i></a>
     <a href="#"><i class='bx bxl-linkedin'></i></a>
     <a href="#"><i class='bx bxl-github'></i></a>
   </div>
 
-  <!-- Scripts -->
-
-  <script>
-    function showSection(section, el, event) {
-      // Prevent the default behavior of the anchor tag (which would cause the page to scroll to the top)
-      event.preventDefault();
-
-      // Hide all sections
-      document.querySelector('.about-section').classList.remove('active');
-      document.querySelector('.education-section').classList.remove('active');
-
-      // Show the selected section with the 'active' class
-      if (section === 'about') {
-        document.querySelector('.about-section').classList.add('active');
-      } else if (section === 'education') {
-        document.querySelector('.education-section').classList.add('active');
-      }
-
-      // Remove active class from all links
-      const links = document.querySelectorAll('.btn-box1 a');
-      links.forEach(link => link.classList.remove('active'));
-
-      // Add active class to the clicked link
-      el.classList.add('active');
-    }
-
-    // Set default active section
-    document.addEventListener('DOMContentLoaded', () => {
-      showSection('about', document.querySelector('.btn-box1 a.active'));
-    });
-  </script>
+  <!-- Form contacts -->
+  <section class="form-contacts">
+    <div class="form-contents">
+      <input type="text" id="name" placeholder="Your Name">
+      <input type="text" id="email" placeholder="Your Email">
+      <textarea id="message" placeholder="Message"></textarea>
+      <button>Submit</button>
+    </div>
+  </section>
 
 
 </body>

@@ -107,25 +107,7 @@ a:hover, .navbar a.active {
     margin: 15px;
 }
 
-.socials a {
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    background-color: #697565; /* Adjusted color for better contrast */
-    margin: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex; /* Ensuring content is centered */
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-}
 
-.socials a:hover {
-    background-color: #575f54; /* Darker shade on hover */
-    transform: scale(1.1); /* Slightly larger on hover */
-}
 
 /* about content */
 .about .wrapper {
@@ -353,4 +335,116 @@ a:hover, .navbar a.active {
 
 .certification .card[for="c3"] {
     background-image: url("Screenshot 2024-12-05 104619.png");
+}
+
+/* Contacts styles */
+
+.contacts { 
+    margin-top: 150px; /*margin between contacts section and certification section */
+}
+
+.contacts h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contacts-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.connect {
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.contacts p {
+    margin: 10px;
+}
+
+
+.socials a {
+    position: relative;
+    bottom: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    background-color: #697565; /* Adjusted color for better contrast */
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex; /* Ensuring content is centered */
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.socials a:hover {
+    background-color: #575f54; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+.form-contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-contents input, .form-contents #message {
+    margin: 5px;
+    background-color: #313335;
+    border: solid #ecf0f1 1px;
+    border-radius: 5px;
+    color: #ecf0f1;
+    height: 40px;
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-contents #message {
+    height: 150px;
+    resize: none;
+    text-align: left;
+    vertical-align: top;
+    overflow: auto;
+}
+
+input::placeholder, #message::placeholder {
+    color: #f1f1f1;
+    opacity: 1;
+}
+
+.form-contents input:focus, .form-contents #message:focus { 
+    outline: none; /* Remove the default focus outline */ 
+    border-color: #f0dfa8; /* Highlight border color */ 
+    box-shadow: 2px 2px 5px #8d795a /* Add a subtle box shadow */
+}
+
+button {
+    margin: 10px;
+    width: 30%;
+    height: 35px;
+    border-radius: 5px;
+    border: solid whitesmoke 1px;
+    background-color: #ECDFCC;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    transition: ease 0.2s;
+}
+
+button:hover {
+    background-color: #c2a984;
+    color: black;
+}
+
+button:active {
+    background-color: hsl(37, 22%, 53%);
 }
