@@ -7,12 +7,11 @@
   <title>Portfolio | Ralph Raffy Suarez</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <script src="script.js"></script>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <style>
-    
-  </style>
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -115,8 +114,10 @@
             <img src="mythic quest.png" alt="">
             <div class="overlay">
               <h3>Mythic Quest Game</h3>
-              <p>A 2d RPG turn based quiz type game developed on unity engine, that is set in a rich and vibrant world inspired by Filipino mythology and folklores.
-                Players can navigate an open world consisting three maps to uncover mysteries and different stories of mythical creatures. Players must also complete
+              <p>A 2d RPG turn based quiz type game developed on unity engine, that is set in a rich and vibrant world
+                inspired by Filipino mythology and folklores.
+                Players can navigate an open world consisting three maps to uncover mysteries and different stories of
+                mythical creatures. Players must also complete
                 engaging side quest and interact with the colorful folklore of the Philippines.
               </p>
             </div>
@@ -126,17 +127,18 @@
         <!-- Website Quantify -->
         <div class="box">
           <a href="https://github.com/ralph2345/web" target="_blank" class="anchor-projects">
-            <img src="Quantify.png"alt="">
+            <img src="Quantify.png" alt="">
             <div class="overlay">
               <h3>Quantify</h3>
               <p>A website innovatine e-commerce app designed specifically for students to purchase school uniforms
-                , accessories, tops, and bottoms. The platform has ensures seamless shopping experienced by providing real-time updates
+                , accessories, tops, and bottoms. The platform has ensures seamless shopping experienced by providing
+                real-time updates
                 on stock levels.
               </p>
             </div>
           </a>
         </div>
-      
+
         <!-- Project Management C#.NET -->
         <div class="box">
           <a href="https://github.com/JeffersonAlot/ProjectManagement_240111" target="_blank" class="anchor-projects">
@@ -144,7 +146,8 @@
             <div class="overlay">
               <h3>Project Management</h3>
               <p>It is a system developed on C#.NET Framework that designed to streamline academic tasks within
-                educational intitutions. The system offers a feature for managing employee records, assigning task and tracking students progress,
+                educational intitutions. The system offers a feature for managing employee records, assigning task and
+                tracking students progress,
                 that is similar on ELMS.
               </p>
             </div>
@@ -160,26 +163,26 @@
   <section class="skills">
     <h1 class="skills-text">My Skills</h1>
     <div class="skills-container">
-        <div class="skill-item">
-          <i class="fa-brands fa-html5 fa-3x"></i>
-          <p>HTML5</p>
-        </div>
-        <div class="skill-item">
-          <i class="fa-brands fa-css3-alt fa-3x"></i>
-          <p>CSS3</p>
-        </div>
-        <div class="skill-item">
-          <i class="fa-brands fa-js fa-3x"></i>
-          <p>Javascript</p>
-        </div>
-        <div class="skill-item">
-          <i class="fa-brands fa-java fa-3x"></i>
-          <p>Java</p>
-        </div>
-        <div class="skill-item">
-          <i class="fa-solid fa-database fa-3x"></i>
-          <p>SQL</p>
-        </div>
+      <div class="skill-item">
+        <i class="fa-brands fa-html5 fa-3x" style="color: #E34F26;"></i>
+        <p>HTML5</p>
+      </div>
+      <div class="skill-item">
+        <i class="fa-brands fa-css3-alt fa-3x" style="color: #1572B6;"></i>
+        <p>CSS3</p>
+      </div>
+      <div class="skill-item">
+        <i class="fa-brands fa-js fa-3x" style="color: #F7DF1E;"></i>
+        <p>Javascript</p>
+      </div>
+      <div class="skill-item">
+        <i class="fa-brands fa-java fa-3x" style="color: #007396;"></i>
+        <p>Java</p>
+      </div>
+      <div class="skill-item">
+        <i class="fa-solid fa-database fa-3x" style="color: #CC2927;"></i>
+        <p>SQL</p>
+      </div>
     </div>
   </section>
 
@@ -212,8 +215,8 @@
             <div class="icon">3</div>
           </div>
       </div>
-    </label>
-    
+      </label>
+
     </div>
     </div>
   </section>
@@ -241,7 +244,7 @@
       <input type="text" id="name" placeholder="Your Name">
       <input type="text" id="email" placeholder="Your Email">
       <textarea id="message" placeholder="Message"></textarea>
-      <button>Submit</button>
+      <button type="button" onclick="sendEmail()">Submit</button>
     </div>
   </section>
 

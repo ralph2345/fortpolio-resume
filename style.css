@@ -468,7 +468,8 @@ button:active {
 
 /* Skills */
 .skills {
-   margin-top: 50px;
+   margin-top: 100px;
+   margin-bottom: 250px;
 }
 .skills-text {
     text-align: center;
@@ -479,6 +480,14 @@ button:active {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.skills-container .skill-item {
+    transition: ease 0.3s;
+}
+
+.skills-container .skill-item:hover {
+    transform: scale(1.1);
 }
 
 .skill-item i {

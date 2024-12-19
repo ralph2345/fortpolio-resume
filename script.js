@@ -26,3 +26,37 @@ function showSection(section, el, event) {
 document.addEventListener('DOMContentLoaded', () => {
     showSection('about', document.querySelector('.btn-box1 a.active'));
 });
+
+
+// Sending email using EmailJS
+emailjs.init("JggfabjZk4lEZ6Xlx");
+
+function sendEmail() {
+    const email = document.getElementById("email").value.trim();
+    const name = document.getElementById("name").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        return;
+    }
+
+    const templateParams = {
+        from_name: name,
+        email_id: email,
+        message: message,
+    };
+
+    emailjs
+    .send("service_hzwpo2u", "template_akie6eh", templateParams)
+    .then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Your message has been sent successfully!");
+      },
+      function (error) {
+        console.log("FAILED...", error);
+        alert("There was an error sending your message. Please try again.");
+      }
+    );
+}
