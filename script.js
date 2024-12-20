@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Sending email using EmailJS
-emailjs.init("JggfabjZk4lEZ6Xlx");
+emailjs.init("JggfabjZk4lEZ6Xlx");// public key
 
 function sendEmail() {
     const email = document.getElementById("email").value.trim();
@@ -60,3 +60,4 @@ function sendEmail() {
       }
     );
 }
+

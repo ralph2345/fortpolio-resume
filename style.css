@@ -2,14 +2,16 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     font-family: "Poppins", sans-serif;
 }
 
 body {
     background-color:#1E201E ;
     color: white;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
@@ -61,9 +63,15 @@ a:hover, .navbar a.active {
 .home-content h1 {
     font-size: 40px;
     font-weight: 700;
+    margin-bottom: 0;
+}
+
+.btn-box {
+    margin-top: 30px;
 }
 
 .home-content h3 {
+    margin-top: 0;
     font-size: 32px;
     font-weight: 700;
     color: #ECDFCC;
@@ -72,12 +80,9 @@ a:hover, .navbar a.active {
 .home-content p{
     font-size: 15px;
     letter-spacing: 1px;
-    margin-top: 10px;
 }
 
-.btn-box {
-    margin-top: 50px;
-}
+
 
 .btn-box a {
     display: inline-flex;
@@ -110,6 +115,8 @@ a:hover, .navbar a.active {
 
 
 /* about content */
+
+
 .about-section,
     .education-section {
       display: none;
@@ -284,11 +291,13 @@ a:hover, .navbar a.active {
 
 
 /* Certifications style */
+.certification {
+    margin-top: 150px;
+}
 
 .certification h1 {
     text-align: center;
-    margin-top: 150px;
-    margin-bottom: 50px;
+
 }
 .certification .wrapper {
     width: 100%;
@@ -355,7 +364,6 @@ a:hover, .navbar a.active {
 }
 
 /* Contacts styles */
-
 .contacts { 
     margin-top: 150px; /*margin between contacts section and certification section */
 }
@@ -372,20 +380,25 @@ a:hover, .navbar a.active {
     flex-direction: column;
 }
 
+.contacts-content h3 {
+    margin: 0;
+}
+
 .connect {
     text-align: center;
     position: relative;
-    top: 10px;
+    bottom: 50px;
+    left: 110px;
 }
 
-.contacts p {
-    margin: 10px;
+.socials {
+    margin-bottom: 50px;
 }
-
 
 .socials a {
     position: relative;
-    bottom: 20px;
+    top: 20px;
+    right: 80px;
     text-decoration: none;
     color: white;
     font-size: 30px;
@@ -467,10 +480,6 @@ button:active {
 }
 
 /* Skills */
-.skills {
-   margin-top: 100px;
-   margin-bottom: 250px;
-}
 .skills-text {
     text-align: center;
 }

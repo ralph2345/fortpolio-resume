@@ -6,11 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Ralph Raffy Suarez</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Icons libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Animation scrolling libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
+  <!-- EmailJS libraries -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </head>
 
@@ -30,7 +35,7 @@
   </header>
 
   <!-- Home content -->
-  <section class="home">
+  <section class="home" data-aos="fade-down">
     <div class="home-content">
       <h1>Hi, I'm Ralph Raffy </h1>
       <h3>Frontend Developer</h3>
@@ -44,7 +49,7 @@
   </section>
 
   <!-- About content -->
-  <section class="about">
+  <section class="about" data-aos="fade-right">
     <div class="wrapper">
       <div class="side-container">
         <img src="https://i.pinimg.com/originals/0c/d0/5c/0cd05cbc547192808b4ad1c411120023.jpg" alt="">
@@ -103,7 +108,7 @@
   </section>
 
   <!-- Pojects -->
-  <section class="services">
+  <section class="services" data-aos="fade-left">
     <h1>Projects</h1>
     <div id="card-area">
       <div class="box-area">
@@ -160,7 +165,7 @@
   </section>
 
   <!-- Skills -->
-  <section class="skills">
+  <section class="skills" data-aos="zoom-in-up">
     <h1 class="skills-text">My Skills</h1>
     <div class="skills-container">
       <div class="skill-item">
@@ -187,7 +192,7 @@
   </section>
 
   <!-- Certifications -->
-  <section class="certification">
+  <section class="certification" data-aos="flip-up" >
     <h1>My Certifications</h1>
     <div class="wrapper">
       <div class="container">
@@ -222,24 +227,26 @@
   </section>
 
   <!-- Contacts -->
-  <section class="contacts">
+  <section class="contacts" data-aos="fade-up" >
     <h1>Let's work together</h1>
     <div class="contacts-content">
       <h3 style="color: #8d795a">Mail</h3>
       <p><i class='bx bx-envelope'></i> szralph64@gmail.com</p>
       <h3 style="color: #8d795a">Phone</h3>
       <p><i class='bx bx-phone-call'></i> +63 991 5615 330</p>
+      <div class="socials">
+        <h3 class="connect" style="color: #8d795a">Connect with me</h3>
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+        <a href="#"><i class='bx bxl-github'></i></a>
+      </div>
     </div>
   </section>
-  <h3 class="connect" style="color: #8d795a">Connect with me</h3>
-  <div class="socials">
-    <a href="#"><i class='bx bxl-facebook'></i></a>
-    <a href="#"><i class='bx bxl-linkedin'></i></a>
-    <a href="#"><i class='bx bxl-github'></i></a>
-  </div>
+  
+  
 
   <!-- Form contacts -->
-  <section class="form-contacts">
+  <section class="form-contacts" data-aos="fade-up" >
     <div class="form-contents">
       <input type="text" id="name" placeholder="Your Name">
       <input type="text" id="email" placeholder="Your Email">
@@ -248,7 +255,15 @@
     </div>
   </section>
 
-
+  <!-- Scroll animation libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine',
+      duration: '1000',
+      once: false
+    });
+  </script>
 </body>
 
 </html>
