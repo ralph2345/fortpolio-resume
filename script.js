@@ -1,4 +1,5 @@
 
+// About section
 function showSection(section, el, event) {
     // Prevent the default behavior of the anchor tag (which would cause the page to scroll to the top)
     event.preventDefault();
@@ -60,4 +61,39 @@ function sendEmail() {
       }
     );
 }
+
+// smooth transition on clicking each navigations
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.navbar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            window.scrollTo({
+                top: targetSection.offsetTop - (window.innerHeight / 2) + (targetSection.clientHeight / 2),
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
+// navigation bar being active when click
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.navbar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', function () {
+            // Remove 'active' class from all links
+            links.forEach(link => link.classList.remove('active'));
+
+            // Add 'active' class to the clicked link
+            this.classList.add('active');
+        });
+    });
+});
+
+
 

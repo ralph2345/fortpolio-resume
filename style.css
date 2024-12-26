@@ -36,6 +36,8 @@ body {
 }
 
 .navbar a{
+    position: relative;
+    left: 20%;
     font-size: 15px;
     color: whitesmoke;
     text-decoration: none;
@@ -44,9 +46,8 @@ body {
     transition: transform 0.3s, color 0.3s;
 }
 
-a:hover, .navbar a.active {
-    color: #ECDFCC;
-    transform: scale(1.2);
+.navbar a:hover, .navbar a.active {
+    color: #e6d1b2;
 }
 
 .home {
@@ -114,6 +115,10 @@ a:hover, .navbar a.active {
     color: #fff;
 }
 
+#hamburger-menu {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .navbar a{
         display: none;
@@ -139,6 +144,11 @@ a:hover, .navbar a.active {
         padding: 1rem;
     }
 
+    #hamburger-menu {
+        display: block;
+        position: absolute;
+        left: 90%;
+    }
     
 }
 
@@ -175,6 +185,8 @@ a:hover, .navbar a.active {
 
 
 .about .wrapper {
+    position: relative;
+    top: 150px;
     display: flex;
     height: 100vh;
     padding: 0 10%;
@@ -256,6 +268,9 @@ a:hover, .navbar a.active {
 /* Services style */
 
 .services h1{
+    position: absolute;
+    top: 10%;
+    left: 47%;
     text-align: center;
 }
 
@@ -273,9 +288,10 @@ a:hover, .navbar a.active {
     grid-gap: 40px;
 }
 
-.box  {
+.box {
     border-radius: 10px;
     position: relative;
+    top: 25%;
     overflow: hidden;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     height: 75%;
@@ -331,16 +347,21 @@ a:hover, .navbar a.active {
 
 /* Certifications style */
 .certification {
-    margin-top: 150px;
+    padding: 100px 10%;
+    min-height: 100vh;
+    position: relative;
+    right: 1%;
+    top: 100px;
 }
 
 .certification h1 {
     text-align: center;
-
+    position: absolute;
+    left: 43%;
 }
 .certification .wrapper {
     width: 100%;
-    height:70vh;
+    min-height:100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -519,11 +540,22 @@ button:active {
 }
 
 /* Skills */
+.skills {
+    padding: 100px 20%;
+    position: relative;
+    top: 150px;
+    min-height: 100vh;
+}
+
 .skills-text {
     text-align: center;
+    position: absolute;
+    left: 46%;
 }
 
 .skills-container{
+    position: relative;
+    top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -536,6 +568,7 @@ button:active {
 
 .skills-container .skill-item:hover {
     transform: scale(1.1);
+    filter: drop-shadow(5px 10px 10px rgba(182, 182, 182, 0.5));
 }
 
 .skill-item i {
