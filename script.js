@@ -80,20 +80,57 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// navigation bar being active when click
+
 document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('.navbar a');
+    const sections = document.querySelectorAll('section'); // Assuming you are using <section> for each part of your page
 
-    links.forEach(link => {
-        link.addEventListener('click', function () {
-            // Remove 'active' class from all links
-            links.forEach(link => link.classList.remove('active'));
+    // Function to handle adding the 'active' class to the navigation link
+    function setActiveLink() {
+        links.forEach(link => {
+            // Check if the section corresponding to the link is in the viewport
+            const targetId = link.getAttribute('href').substring(1); // Get the target section ID
+            const targetSection = document.getElementById(targetId);
 
-            // Add 'active' class to the clicked link
-            this.classList.add('active');
+            if (isElementInViewport(targetSection)) {
+                // Add 'active' class to the link if the section is in the viewport
+                link.classList.add('active');
+            } else {
+                // Remove 'active' class if the section is not in the viewport
+                link.classList.remove('active');
+            }
         });
+    }
+
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
+
+    // Monitoring each section
+    const observerOptions = {
+        root: null, 
+        rootMargin: '1px',
+        threshold: [0.25, 0.5, 0.75, 1.0] 
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // When the section is in the viewport, highlight the corresponding nav link
+                setActiveLink();
+            }
+        });
+    }, observerOptions);
+
+    // Observe each section
+    sections.forEach(section => {
+        observer.observe(section);
     });
+
+    setActiveLink();
 });
+
 
 
 
