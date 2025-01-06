@@ -83,6 +83,31 @@ body {
     }
 }
 
+@media (max-width: 390px) {
+    .home-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 1rem;
+    }
+
+    .home-content p {
+        font-size: 0.8rem;
+    }
+
+    .btn-box a {
+        font-size: 14px;
+        margin: 20px;
+    }
+
+    .checkbtn{
+        position: relative;
+        right: 35%;
+
+    }
+}
+
 .home {
     display: flex;
     align-items: center;
@@ -152,6 +177,36 @@ body {
     display: none;
 }
 
+@media (max-width: 390px){
+
+    .navbar{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 60px;
+        left: -100%;
+        padding: 0;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 20px auto;
+        width: auto;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        text-align: center;
+        position: relative;
+        left: 0;
+    }
+
+    #check:checked ~ .navbar {
+        left: 0;
+    }
+}
 @media (max-width: 858px) {
     .checkbtn {
         display: block;
@@ -669,6 +724,39 @@ body {
         top: 750px;
         width: 200%;
         right: 50%;
+    }
+}
+
+@media (max-width: 390px) {
+    .contacts {
+        position: relative;
+        top: 750px;
+    }
+
+    .form-contacts .form-contents {
+        position: relative;
+        top: 750px;
+        width: 200%;
+        right: 50%;
+    }
+
+    .contacts-content .socials .connect {
+        position: relative;
+        align-items: center;
+        left: 35%;
+        margin-top: 25px;
+    }
+
+    .contacts-content .socials a {
+        position: relative;
+        right: -100;
+        left: -100;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .contacts .contacts-content h3 {
+        margin: 15px;
     }
 }
 
